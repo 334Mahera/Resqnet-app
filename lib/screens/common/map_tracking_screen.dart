@@ -33,7 +33,7 @@ class _MapTrackingScreenState extends State<MapTrackingScreen> {
   final Set<Polyline> polylines = {};
 
   // 🔑 Google Maps API Key
-  final String googleApiKey = "AIzaSyDzOpS56NzImWASfv5VuK542KQ_IwgtUv8";
+  final String googleApiKey = "your api key";
 
   double distanceKm = 0;
   int etaMinutes = 0;
@@ -50,9 +50,6 @@ class _MapTrackingScreenState extends State<MapTrackingScreen> {
     _drawPolyline();
   }
 
-  // --------------------------------------------------
-  // 📏 DISTANCE + ETA
-  // --------------------------------------------------
   void _calculateDistanceAndETA() {
     distanceKm = DistanceUtils.calculateDistance(
       userLatLng.latitude,
@@ -64,9 +61,6 @@ class _MapTrackingScreenState extends State<MapTrackingScreen> {
     etaMinutes = DistanceUtils.calculateETA(distanceKm);
   }
 
-  // --------------------------------------------------
-  // 📍 MARKERS
-  // --------------------------------------------------
   void _addMarkers() {
     markers.clear();
 
@@ -90,9 +84,6 @@ class _MapTrackingScreenState extends State<MapTrackingScreen> {
     );
   }
 
-  // --------------------------------------------------
-  // 🧭 ROUTE POLYLINE
-  // --------------------------------------------------
   Future<void> _drawPolyline() async {
     final polylinePoints = PolylinePoints();
 
@@ -129,9 +120,6 @@ class _MapTrackingScreenState extends State<MapTrackingScreen> {
     });
   }
 
-  // --------------------------------------------------
-  // 🗺 UI
-  // --------------------------------------------------
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -156,7 +144,7 @@ class _MapTrackingScreenState extends State<MapTrackingScreen> {
             },
           ),
 
-          // 🚴 ETA + DISTANCE CARD (Blinkit style)
+        
           Positioned(
             top: 16,
             left: 16,
