@@ -18,8 +18,8 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'ResQnet',
-        debugShowCheckedModeBanner: false, // ✅ remove debug banner
-        theme: AppTheme.lightTheme,        // ✅ centralized theme
+        debugShowCheckedModeBanner: false, 
+        theme: AppTheme.lightTheme,       
         initialRoute: Routes.splash,
         onGenerateRoute: Routes.onGenerate,
       ),
