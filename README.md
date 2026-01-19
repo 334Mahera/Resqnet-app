@@ -2,15 +2,74 @@
 
 A new Flutter project.
 
-## Getting Started
+🚨 ResQNet – Emergency Response & Volunteer Coordination App
 
-This project is a starting point for a Flutter application.
+ResQNet is a real-time emergency assistance mobile application built with Flutter and Firebase, designed to connect people in distress with nearby volunteers and administrators for faster response during emergencies.
 
-A few resources to get you started if this is your first Flutter project:
+The app supports live location tracking, role-based access, and real-time status updates, inspired by real-world on-demand platforms.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Key Features
+👤 User (Help Seeker)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+SOS emergency request creation
+
+Category-based emergency requests (Fire, Medical, Accident, Flood)
+
+Live volunteer tracking on map (Blinkit-style experience)
+
+Real-time status updates (Assigned → On the way → Arrived)
+
+Location sharing with volunteers
+
+🚑 Volunteer
+
+Accept nearby emergency requests
+
+Live GPS tracking while responding
+
+Route visualization using Google Maps
+
+Status flow management (Start → Arrived → Complete)
+
+Online / Offline availability toggle
+
+🛡 Admin
+
+Centralized dashboard to monitor all requests
+
+View user & volunteer details
+
+Force complete or cancel requests
+
+Reassign volunteers if required
+
+Analytics dashboard with charts & insights
+
+## Tech Stack
+
+Frontend: Flutter (Material UI)
+
+Backend: Firebase (Authentication, Firestore, Hosting)
+
+Maps & Location: Google Maps API, Geolocator
+
+State Management: Provider
+
+Real-time Updates: Firestore Streams
+
+Architecture: Modular + Service-based architecture
+
+## Core Highlights
+
+Real-time location streaming (volunteer GPS)
+
+Role-based routing (User / Volunteer / Admin)
+
+Secure environment variable handling (API keys excluded)
+
+Clean UI inspired by production apps (Blinkit-style UX)
+
+Scalable Firebase data model
+
+## Security Note
+API keys, Firebase credentials, and secrets are not committed to this repository.
