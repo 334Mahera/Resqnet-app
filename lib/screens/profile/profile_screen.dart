@@ -39,7 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       backgroundColor: const Color(0xFFF7F7F7),
 
-      // 🟢 AppBar (Blinkit style)
+     
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white,
@@ -61,12 +61,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // 🖼️ Profile image card
+         
           _profileHeader(user),
 
           const SizedBox(height: 16),
 
-          // 👤 Personal info card
+          
           _infoCard(
             title: "Personal Information",
             children: [
@@ -88,7 +88,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
           const SizedBox(height: 16),
 
-          // 🎭 Role card
+         
           _infoCard(
             title: "Role",
             children: [
@@ -106,7 +106,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
           const SizedBox(height: 24),
 
-          // 🔘 Action button
+          
           SizedBox(
             height: 52,
             child: ElevatedButton(
@@ -161,9 +161,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // --------------------------------------------------
-  // 🖼️ Profile Header
-  // --------------------------------------------------
   Widget _profileHeader(AppUser user) {
     return Card(
       shape: RoundedRectangleBorder(
@@ -216,9 +213,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // --------------------------------------------------
-  // 📦 Card Wrapper
-  // --------------------------------------------------
   Widget _infoCard({
     required String title,
     required List<Widget> children,
@@ -243,9 +237,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // --------------------------------------------------
-  // ✏️ Input Field
-  // --------------------------------------------------
   Widget _inputField({
     TextEditingController? controller,
     required String label,
@@ -269,9 +260,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // --------------------------------------------------
-  // 📷 Image Picker
-  // --------------------------------------------------
   Future<void> _pickImage() async {
     final picker = ImagePicker();
     final picked = await picker.pickImage(source: ImageSource.gallery);
@@ -283,9 +271,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     await _uploadProfileImage(image);
   }
 
-  // --------------------------------------------------
-  // ☁️ Upload to Firebase Storage
-  // --------------------------------------------------
   Future<void> _uploadProfileImage(File imageFile) async {
     final auth = Provider.of<AuthService>(context, listen: false);
     final uid = auth.currentUser!.uid;
