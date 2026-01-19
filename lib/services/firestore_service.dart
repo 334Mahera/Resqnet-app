@@ -7,10 +7,6 @@ class FirestoreService {
   final String usersCol = 'users';
   final String requestsCol = 'requests';
 
-  // --------------------------------------------------
-  // 👤 USERS
-  // --------------------------------------------------
-
   Future<void> createUser(AppUser user) async {
     await _db
         .collection(usersCol)
@@ -26,10 +22,6 @@ class FirestoreService {
   Future<void> updateUserField(String uid, Map<String, dynamic> data) async {
     await _db.collection(usersCol).doc(uid).update(data);
   }
-
-  // --------------------------------------------------
-  // 📦 CREATE REQUEST (Blinkit-style)
-  // --------------------------------------------------
 
   Future<void> createRequest({
     required String userId,
@@ -71,10 +63,6 @@ class FirestoreService {
     });
   }
 
-  // --------------------------------------------------
-  // 🤝 VOLUNTEER ACCEPT REQUEST
-  // --------------------------------------------------
-
   Future<void> assignVolunteer({
     required String requestId,
     required String volunteerId,
@@ -90,10 +78,6 @@ class FirestoreService {
     });
   }
 
-  // --------------------------------------------------
-  // 🚗 UPDATE REQUEST STATUS
-  // --------------------------------------------------
-
   Future<void> updateRequestStatus({
     required String requestId,
     required String status,
@@ -103,10 +87,6 @@ class FirestoreService {
       'updatedAt': FieldValue.serverTimestamp(),
     });
   }
-
-  // --------------------------------------------------
-  // 📍 UPDATE VOLUNTEER LIVE LOCATION
-  // --------------------------------------------------
 
   Future<void> updateVolunteerLocation({
     required String requestId,
@@ -119,10 +99,6 @@ class FirestoreService {
       'updatedAt': FieldValue.serverTimestamp(),
     });
   }
-
-  // --------------------------------------------------
-  // 💬 CHAT
-  // --------------------------------------------------
 
   Future<void> sendMessage({
     required String requestId,
