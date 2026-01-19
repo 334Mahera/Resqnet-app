@@ -49,7 +49,7 @@ class AdminHomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
 
-                      // 🔴 TITLE
+                  
                       Text(
                         data['title'] ?? 'Request',
                         style: const TextStyle(
@@ -60,7 +60,7 @@ class AdminHomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 6),
 
-                      // 👤 USER INFO
+                    
                       Text(
                         "User: ${data['userName']} (${data['userEmail']})",
                         style: const TextStyle(fontWeight: FontWeight.w600),
@@ -68,7 +68,7 @@ class AdminHomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 4),
 
-                      // 🤝 VOLUNTEER INFO
+                      
                       if (data['volunteerName'] != null)
                         Text(
                           "Volunteer: ${data['volunteerName']} (${data['volunteerEmail']})",
@@ -86,7 +86,7 @@ class AdminHomeScreen extends StatelessWidget {
 
                       const SizedBox(height: 8),
 
-                      // 📌 STATUS
+                      
                       Text(
                         "Status: ${data['status']}",
                         style: const TextStyle(fontWeight: FontWeight.w600),
@@ -98,7 +98,7 @@ class AdminHomeScreen extends StatelessWidget {
                       Column(
                         children: [
 
-                          // 🔁 REASSIGN VOLUNTEER
+                      
                           SizedBox(
                             width: double.infinity,
                             child: OutlinedButton.icon(
@@ -118,7 +118,7 @@ class AdminHomeScreen extends StatelessWidget {
                           Row(
                             children: [
 
-                              // ✅ FORCE COMPLETE
+                          
                               if (data['status'] != 'completed')
                                 Expanded(
                                   child: ElevatedButton(
@@ -175,9 +175,6 @@ class AdminHomeScreen extends StatelessWidget {
     );
   }
 
-  // --------------------------------------------------
-  // 👥 VOLUNTEER PICKER
-  // --------------------------------------------------
   void _showVolunteerPicker(
     BuildContext context, {
     required String requestId,
