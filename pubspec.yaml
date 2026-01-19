@@ -1,0 +1,48 @@
+name: resqnet_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  firebase_core: ^4.2.0
+  firebase_auth: ^6.1.1
+  cloud_firestore: ^6.0.3
+  firebase_storage: ^13.0.3
+  provider: ^6.1.5+1
+  flutter_svg: ^2.2.1
+  shared_preferences: ^2.5.3
+  image_picker: ^1.1.20
+  geolocator: ^10.1.0
+  geocoding: ^2.1.0
+  url_launcher: ^6.2.1
+  firebase_messaging: ^16.0.3
+  flutter_local_notifications: ^17.1.2
+  google_maps_flutter: ^2.6.0
+  flutter_polyline_points: ^2.0.0
+  fl_chart: ^0.66.0
+
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/fire.png
+    - assets/images/medical.png
+    - assets/images/flood.png
+    - assets/images/accident.png
+    - assets/images/all.png
+
+
