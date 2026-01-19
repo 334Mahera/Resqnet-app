@@ -47,29 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyB7X9lHerKtN6JMa92otQFrw9C62vZluJc',
-    appId: '1:20779677637:web:3f73acc88e235535143dac',
-    messagingSenderId: '20779677637',
-    projectId: 'resqnet-app-f3027',
-    authDomain: 'resqnet-app-f3027.firebaseapp.com',
-    storageBucket: 'resqnet-app-f3027.firebasestorage.app',
+    apiKey: ' your api key',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDzOpS56NzImWASfv5VuK542KQ_IwgtUv8',
-    appId: '1:20779677637:android:44d5a750c85f15ca143dac',
-    messagingSenderId: '20779677637',
-    projectId: 'resqnet-app-f3027',
-    storageBucket: 'resqnet-app-f3027.firebasestorage.app',
+    apiKey: 'your api key',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    storageBucket: '',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyB7X9lHerKtN6JMa92otQFrw9C62vZluJc',
-    appId: '1:20779677637:web:b12051970d724086143dac',
-    messagingSenderId: '20779677637',
-    projectId: 'resqnet-app-f3027',
-    authDomain: 'resqnet-app-f3027.firebaseapp.com',
-    storageBucket: 'resqnet-app-f3027.firebasestorage.app',
+    apiKey: '',
+    appId: '',
+    messagingSenderId: '',
+    projectId: '',
+    authDomain: '',
+    storageBucket: '',
   );
 
 }
