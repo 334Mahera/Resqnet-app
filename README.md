@@ -77,15 +77,16 @@ API keys, Firebase credentials, and secrets are not committed to this repository
 ## 📸 App Screenshots
 
 ###  User Flow
-![User Home](main/user_home.png)
-![Live Tracking](main/user_live_tracking.png)
+![User Home](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/user_home.png)
+
+![Live Tracking](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/live tracking.png)
 
 ###  Volunteer Flow
-![Volunteer Home](main/volunteer_home.png)
-![Volunteer Requests](main/volunteer_requests.png)
-![Live Map](main/live_map.png)
+![Volunteer Home](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/volunteer_home.png)
+![Volunteer Requests](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/volunteer_requests.png)
+![Live Map](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/live_map.png)
 
 ###  Admin Panel
-![Admin Dashboard](main/admin_dashboard.png)
-![Admin Analytics](main/admin_analytics.png)
+![Admin Dashboard](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/admin_dashboard.png)
+![Admin Analytics](https://raw.githubusercontent.com/334Mahera/Resqnet-app/main/admin_analytics.png)
 
