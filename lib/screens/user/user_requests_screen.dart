@@ -27,7 +27,7 @@ class UserRequestsScreen extends StatelessWidget {
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance
             .collection('requests')
-            .where('userId', isEqualTo: uid) // ✅ IMPORTANT FIX
+            .where('userId', isEqualTo: uid) 
             .orderBy('timestamp', descending: true)
             .snapshots(),
         builder: (context, snapshot) {
