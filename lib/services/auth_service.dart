@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart'; // ✅ kIsWeb
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -16,9 +16,6 @@ class AuthService extends ChangeNotifier {
     _auth.authStateChanges().listen(_onAuthStateChanged);
   }
 
-  // --------------------------------------------------
-  // 🔹 AUTH STATE LISTENER
-  // --------------------------------------------------
   Future<void> _onAuthStateChanged(User? fbUser) async {
     if (fbUser == null) {
       currentUser = null;
@@ -45,20 +42,14 @@ class AuthService extends ChangeNotifier {
           .set(currentUser!.toMap());
     }
 
-    await _saveFCMTokenIfNeeded(); // ✅ safe now
+    await _saveFCMTokenIfNeeded(); 
     notifyListeners();
   }
 
-  // --------------------------------------------------
-  // 🔹 GETTERS
-  // --------------------------------------------------
   User? get firebaseUser => _auth.currentUser;
   String? get uid => _auth.currentUser?.uid;
   bool get isLoggedIn => _auth.currentUser != null;
 
-  // --------------------------------------------------
-  // 🔹 SIGN IN
-  // --------------------------------------------------
   Future<String?> signIn(String email, String password) async {
     try {
       await _auth.signInWithEmailAndPassword(
@@ -70,10 +61,7 @@ class AuthService extends ChangeNotifier {
       return e.toString();
     }
   }
-
-  // --------------------------------------------------
-  // 🔹 SIGN UP
-  // --------------------------------------------------
+  
   Future<String?> signUp({
     required String email,
     required String password,
@@ -104,7 +92,7 @@ class AuthService extends ChangeNotifier {
 
       currentUser = appUser;
 
-      await _saveFCMTokenIfNeeded(); // ✅ safe
+      await _saveFCMTokenIfNeeded();
       notifyListeners();
       return null;
     } catch (e) {
@@ -112,20 +100,14 @@ class AuthService extends ChangeNotifier {
     }
   }
 
-  // --------------------------------------------------
-  // 🔹 SIGN OUT
-  // --------------------------------------------------
   Future<void> signOut() async {
     await _auth.signOut();
     currentUser = null;
     notifyListeners();
   }
 
-  // --------------------------------------------------
-  // 🔹 SAVE FCM TOKEN (ANDROID ONLY)
-  // --------------------------------------------------
   Future<void> _saveFCMTokenIfNeeded() async {
-    if (kIsWeb) return; // 🚫 disable FCM on web
+    if (kIsWeb) return; 
     if (currentUser == null) return;
 
     final token = await FirebaseMessaging.instance.getToken();
