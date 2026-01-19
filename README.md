@@ -77,15 +77,15 @@ API keys, Firebase credentials, and secrets are not committed to this repository
 ## 📸 App Screenshots
 
 ###  User Flow
-![User Home](screenshots/user_home.png)
-![Live Tracking](screenshots/user_live_tracking.png)
+![User Home](main/user_home.png)
+![Live Tracking](main/user_live_tracking.png)
 
 ###  Volunteer Flow
-![Volunteer Home](screenshots/volunteer_home.png)
-![Volunteer Requests](screenshots/volunteer_requests.png)
-![Live Map](screenshots/live_map.png)
+![Volunteer Home](main/volunteer_home.png)
+![Volunteer Requests](main/volunteer_requests.png)
+![Live Map](main/live_map.png)
 
 ###  Admin Panel
-![Admin Dashboard](screenshots/admin_dashboard.png)
-![Admin Analytics](screenshots/admin_analytics.png)
+![Admin Dashboard](main/admin_dashboard.png)
+![Admin Analytics](main/admin_analytics.png)
 
