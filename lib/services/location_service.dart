@@ -1,9 +1,6 @@
 import 'package:geolocator/geolocator.dart';
 
 class LocationService {
-  // --------------------------------------------------
-  // 📍 Ensure location permission
-  // --------------------------------------------------
   static Future<void> ensurePermission() async {
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
@@ -21,9 +18,6 @@ class LocationService {
     }
   }
 
-  // --------------------------------------------------
-  // 📍 One-time location (User request)
-  // --------------------------------------------------
   static Future<Position> getCurrentLocation() async {
     await ensurePermission();
 
@@ -32,9 +26,6 @@ class LocationService {
     );
   }
 
-  // --------------------------------------------------
-  // 🚗 Live location stream (Volunteer tracking)
-  // --------------------------------------------------
   static Stream<Position> getLiveLocation({
     int distanceFilter = 10, // meters
   }) async* {
