@@ -64,7 +64,7 @@ class Routes {
       // USER FLOW (Blinkit-style)
       case userHome:
         return MaterialPageRoute(
-          builder: (_) => const UserBottomNav(), // 🔥 important
+          builder: (_) => const UserBottomNav(),
         );
 
       case userRequests:
