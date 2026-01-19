@@ -28,7 +28,7 @@ class UserHomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           children: [
 
-            // 🔴 SOS BUTTON
+            
             SizedBox(
               height: 56,
               child: ElevatedButton.icon(
@@ -51,7 +51,7 @@ class UserHomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // 🚑 LIVE TRACKING CARD (🔥 FIXED – NEVER DISAPPEARS)
+            
             StreamBuilder<QuerySnapshot>(
               stream: FirebaseFirestore.instance
                   .collection('requests')
@@ -62,7 +62,7 @@ class UserHomeScreen extends StatelessWidget {
                   return const SizedBox();
                 }
 
-                // ✅ FILTER IN DART (CRITICAL FIX)
+                
                 final activeRequests = snapshot.data!.docs.where((doc) {
                   final data = doc.data() as Map<String, dynamic>;
                   final status = data['status'];
@@ -75,7 +75,7 @@ class UserHomeScreen extends StatelessWidget {
                   return const SizedBox();
                 }
 
-                // ✅ LATEST ACTIVE REQUEST
+               
                 final data =
                     activeRequests.last.data() as Map<String, dynamic>;
 
@@ -150,7 +150,7 @@ class UserHomeScreen extends StatelessWidget {
               },
             ),
 
-            // 🧯 CATEGORIES
+          
             const Text(
               "Emergency Categories",
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
@@ -209,7 +209,7 @@ class UserHomeScreen extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // 🛡 SAFETY CARD
+           
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -228,7 +228,7 @@ class UserHomeScreen extends StatelessWidget {
     );
   }
 
-  // 🔥 CREATE REQUEST WITH GPS (CORRECT)
+ 
   void _createRequest(
     BuildContext context, {
     required String category,
@@ -254,7 +254,7 @@ class UserHomeScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () async {
               final position =
-                  await LocationService.getCurrentLocation(); // ✅ GPS
+                  await LocationService.getCurrentLocation(); 
 
               await FirestoreService().createRequest(
                 userId: auth.uid!,
